@@ -1,0 +1,103 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Imagen del usuario -->
+    <ImageView
+        android:id="@+id/imageViewUserDetails"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Datos del usuario -->
+
+    <!-- Imagen de la bandera -->
+    <LinearLayout
+        android:id="@+id/userDetailsContainer"
+        android:layout_width="252dp"
+        android:layout_height="163dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewFlag"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUserDetails">
+
+        <TextView
+            android:id="@+id/textViewNameDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewEmailDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+
+        <TextView
+            android:id="@+id/textViewAgeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age" />
+
+        <TextView
+            android:id="@+id/textViewPhoneDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone" />
+
+        <TextView
+            android:id="@+id/textViewCellDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cell" />
+
+        <TextView
+            android:id="@+id/textViewNationalityDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nationality" />
+
+        <TextView
+            android:id="@+id/textViewIdDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID" />
+
+        <TextView
+            android:id="@+id/textViewCountryDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewFlag"
+        android:layout_width="122dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userDetailsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userDetailsContainer" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="336dp"
+        android:layout_height="302dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
